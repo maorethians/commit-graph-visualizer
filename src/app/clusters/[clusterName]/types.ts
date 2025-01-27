@@ -1,7 +1,8 @@
 export interface Node {
   id: string;
-  hunk: string;
-  isContext: boolean;
+  content: string;
+  nodeType: 'BASE' | 'CONTEXT' | 'AGGREGATOR' | 'EXTENSION';
+  aggregatorId?: string;
 }
 
 export interface Edge {
